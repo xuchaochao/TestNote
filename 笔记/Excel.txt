@@ -1,0 +1,8 @@
+Excel
+
+POI:
+1.合并单元格:
+CellRangeAddress（int firstRow, int lastRow, int firstCol, int lastCol）
+参数：起始行号，终止行号， 起始列号，终止列号
+经过仔细测试，应该是 CellRangeAddress(起始行号，终止行号， 起始列号，终止列号）. 
+
