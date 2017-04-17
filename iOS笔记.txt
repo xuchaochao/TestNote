@@ -1,8 +1,3 @@
-
-
-仓库 激活商品 生成物录入（需要有车） 建立电子地图
-
-
 @interface部分：ßßß
 @interface NewClassesName : ParentClassName
 开头的符号 （-） 表示该方法是一个实例方法
@@ -114,7 +109,7 @@ switch(){case 'char':...break;default:...break;}
 [myFraction numerator] 或者 myFraction.numerator 得到该属性的值；
 [myFraction setNumerator: 1] 或者 myFraction.numerator = 1 设置该属性的值；
 
-7.4具有多个参数的方法
+7.4 具有多个参数的方法
 7.4.0:
 具有多个参数的方法在头文件中-(void) setTo:(int) n over:(int)d;
 在实现文件中：-(void)setTo:(int) n over: (int) d{ numerator = n; denominator = d; }
@@ -138,7 +133,7 @@ pageCount如果不是局部静态变量，而移出方法体外，成为一个�
 7.6 self关键字
 self用来指明对象(这个对象指的就是调用该方法的对象,对象又是由类产生的)是当前方法的接收者.
 [self reduce]
-关于self,在[aFraction add: bFraction];中的add方法里调用了reduce方法:[self reduce],那么self指的就是aFraction,self作为aFraction的引用.
+关于self,在[aFraction add: bFraction];中的add方法里调用了reduce方法:[self reduce],那么self指的就是aFraction,self作为 aFraction 的引用.
 
 7.7 在方法中分配和返回对象
 -(Fraction *) add: (Fraction *) f 参数为Fracton的一个引用，返回值也是.
@@ -161,3 +156,13 @@ NSObject是顶级的父类，也就是其上没有父类了。
 这个没怎么说
 
 第九章 多态，动态类型和多态绑定
+9.1 多态，相同的名称，不同的类
+
+获得类对象：[Square class];
+如果mySquare是Square对象的实例，可以通过[mySquare class]知道他所属的类；
+要查看存储在变量obj1和obj2中的对象是不是相同的类实例，可以通过if([obj1 class] == [obj2 class])来判断；
+要查看变量是不是类的对象可以用[实例 isMemberOfClass:[Fraction class]];
+
+@ try{} @ catch{（NSException *exception）NSLog(@"caught %@%@",[Exception name],[excetion reason]};
+
+第十章 变量和数据类型
