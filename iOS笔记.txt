@@ -103,7 +103,7 @@ switch(){case 'char':...break;default:...break;}
 7.2.1：
 自动生成设置方法和取值方法：1.在接口部分使用@property int numerator,denominator;2.在实现文件中@synthesize numerator,denominator;,
 7.2.2：
-不用@synthesize指令，只使用@property指令编译器就会自动生成setter和getter方法，但是编译器自动生成的方法会以下划线_作为其名称的第一个字符。
+不用@synthesize指令，只使用 @property 指令编译器就会自动生成setter和getter方法，但是编译器自动生成的方法会以下划线_作为其名称的第一个字符。
 
 7.3使用点运算符访问属性
 [myFraction numerator] 或者 myFraction.numerator 得到该属性的值；
@@ -141,14 +141,14 @@ self用来指明对象(这个对象指的就是调用该方法的对象,对象�
 第八章 继承
 
 8.1 一切从根类开始
-8.1.0：
+8.1.0：ßßß
 NSObject是顶级的父类，也就是其上没有父类了。
-子类能直接使用父类的实例方法和实例变量，而不用再接口或者实现文件中再次定义。
+子类能直接使用父类的实例方法和实例变量 ， 而不用再接口或者实现文件中再次定义。
 8.1.1：
 在子类中调用某个方法时，会在本类-》父类——》父类的父类一直在寻找，寻找不到会报错类似“warning:classXX may not respond to '方法名/实例名'”
 8.2 通过继承来扩展：添加新方法
 在自定义的子类中写子类自己的方法，然后调用父类的方法。
-8.2.2 @class 某类名 相当于部分作用的 #import “某头文件”，可以在遇到 XX *xx 时告诉编译器XX是一个类的名字，xx是类的一个对象。
+8.2.2 @class 某类名 相当于部分作用的 #import “某头文件”，可以在遇到 XX *xx 时告诉编译器XX是一个类的名字 ， xx是类的一个对象。
 
 8.3 覆写方法
 这个比较简单
@@ -159,10 +159,19 @@ NSObject是顶级的父类，也就是其上没有父类了。
 9.1 多态，相同的名称，不同的类
 
 获得类对象：[Square class];
-如果mySquare是Square对象的实例，可以通过[mySquare class]知道他所属的类；
+如果 mySquare 是 Square 对象的实例，可以通过[mySquare class]知道他所属的类；
 要查看存储在变量obj1和obj2中的对象是不是相同的类实例，可以通过if([obj1 class] == [obj2 class])来判断；
 要查看变量是不是类的对象可以用[实例 isMemberOfClass:[Fraction class]];
 
 @ try{} @ catch{（NSException *exception）NSLog(@"caught %@%@",[Exception name],[excetion reason]};
 
 第十章 变量和数据类型
+10.1 对象的初始化
+很多类中有好几个初始化方法，另外也可以通过重载init方法来对类在初始化时做一些事情。
+
+全局变量，在文件开头定义一个变量：int num =0; 在不同的文件中使用则需要在文件中申明这个全局变量extern int num；
+静态变量,
+枚举，enum flag { true, false} ;
+
+第十一章 分类和协议
+分类
